@@ -60,7 +60,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, Change
                 self.updateWeatherData(json: weatherJSON)
             }
             else {
-                print("Error: \(response.result.error)")
+                print("Error: \(String(describing: response.result.error))")
                 self.cityLabel.text = "Connection Issues"
             }
         }
